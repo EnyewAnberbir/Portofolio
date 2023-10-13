@@ -1,0 +1,100 @@
+body{
+    cursor: pointer;
+    overflow: scroll;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fcfafa;
+    height: 100vh;
+    overflow :hidden;
+  }
+  
+  .sidebar {
+    width: 20%; 
+    background-color: white;
+    color: #351919;
+    margin-left: -1rem;
+    padding: 5rem;
+    height :100%;
+    text-align: center;
+    position: fixed;
+    
+  }
+  .sidebar nav {
+    list-style: none;
+    padding: 0;
+    margin-top: 15rem;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 12px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3rem; 
+    font-weight:lighter;
+    
+  }
+
+  .content {
+    width: 80%; 
+    text-align: center;
+    position: relative;  
+    animation: moveImage 2s ease-in-out; 
+  }
+  
+  .content img {
+    margin-top :-7rem; 
+    max-width: 50%;
+    height: auto;
+    border-radius: 50%;
+    animation: moveBorder 4s linear infinite; 
+  }
+
+  .note {
+    margin-top: 20px;
+    background-color: #fcfafa;
+    padding: 10px;
+    /* border: 1px solid #ddd; */
+    border-radius: 5px;
+  }
+  
+  .note p {
+    margin: 0;
+  }
+  @keyframes moveImage {
+    0% {            
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes moveBorder {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4); /* Initial shadow properties */
+      transform: translateY(0);
+    }
+    25% {
+      box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4); /* Wave effect - change shadow properties */
+      transform: translateY(-5px);
+    }
+    50% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4); /* Back to initial state */
+      transform: translateY(0);
+    }
+    75% {
+      box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4); /* Another wave effect */
+      transform: translateY(5px);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4); /* Back to initial state */
+      transform: translateY(0);
+    }
+  }
+  

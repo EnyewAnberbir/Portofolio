@@ -1,21 +1,19 @@
-// import logo from './logo.svg';
 import './App.css';
 import Home from "./pages/Home.js";
+import Resume from "./pages/resume.js";
 import Navbar from "./components/navbar";
 import Footer from './components/footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 function App() {
   return (
     <div className="App">
       <Router>
-      <Navbar/>
-      <Routes>
-        <Route path ="/" exact component ={Home} />
-      
-      </Routes>
+        <Routes>
+          <Route path="/" element={<> <Home /></>}/>
+          <Route path="/Resume" element={<><Navbar /><Resume /> <Footer /></>} />
+        </Routes>
       </Router>
-      <h1>Enyew</h1>
-      <Footer/>
     </div>
   );
 }
